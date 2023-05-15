@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300;1,400&display=swap");
+
+:root{
+    --mainColor:#64bcf4;
+    --hoverColor:#64bcf4;
+    --backgroundColor: rgb(240, 232, 240);
+    --darkOne: #312f34;
+    --darkTwo:#45424d;
+    --lightOne:#919191;
+    --lightTwo:#aaa;
+}
+*,
+ *::before,
+ *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+.big-wrapper{
+    padding: 1.7rem;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--backgroundColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container{
+    position: relative;
+    
+    max-width: 81rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+    z-index:10;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.logo h3{
+    color: var(--darkTwo);
+    font-size: 1.55rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.logo img{
+    width: 40px;
+    margin-right: .6rem;
+    margin-top: -0.6rem;
+}
+.links{
+    display: flex;
+}
+#menu-btn {
+width: 30px;
+height: 30px;
+display: none;
+}
+#menu-close{
+display: none;
+
+
+}
+.links ul{
+display: flex;
+list-style: none;
+align-items: center;
+}
+.links a{
+    color:var(--lightTwo);
+    margin-left: 4.5rem;
+    display: inline-block;
+    transition: .3s;
+}
+.links a:hover {
+color: var(--hoverColor);
+transform: scale(1.05);
+}
+.btn{
+    display:inline-block;
+    padding: .9rem 1.9rem;
+    color: white !important;
+    background-color: var(--mainColor);
+    text-transform: capitalize;
+    border-radius: 16px;
+    transition: 0.3sec;
+}
+.btn:hover{
+    background-color: var(--hoverColor);
+    transform: scale(1) !important;
+
+}
+.pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:   rgb(228, 235, 234);
+    height: 100vh;
+    width: 100%;
+}
+.slider{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.slides input{
+    display: none;
+
+}
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex
+
+}
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+.slide img{
+    width: 800px;
+    height: 500px;
+
+}
+.navigation-manual{
+position: absolute;
+width: 800px;
+margin-top: 470px;
+display: flex;
+justify-content: center;
+
+}
+.manual-btn{
+border: 2px solid rgb(243, 223, 43);
+padding: 5px;
+border-radius: 10px;
+cursor: pointer;
+transition: 1s;
+
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+
+}
+.manual-btn:hover{
+    background: #64bcf4;
+}
+#radio1:checked ~ .first{
+margin-left: 0;
+
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+    
+    }
+    #radio3:checked ~ .first{
+        margin-left: -40%;
+        
+        }
+        #radio4:checked ~ .first{
+            margin-left: -60%;
+            
+            }
+ .navigation-auto{
+position: absolute;
+display: flex;
+width: 800px;
+justify-content: center;
+margin-top: 470px;
+
+
+ }  
+.navigation-auto div{
+    border: 2px solid  rgb(243, 223, 43);
+    padding: 5px;
+    border-radius: 10px;
+    transform: 1s;
+
+ }  
+ .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+
+ }    
+ #radio1:checked ~ .navigation-auto .auto-btn1{
+    background:#64bcf4;
+ }  
+ #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #64bcf4;
+ }    
+ #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #64bcf4;
+ }    
+ #radio4:checked ~ .navigation-auto .auto-btn4{
+    background:#64bcf4 ;
+ }      
+section .row{
+width: 100%;
+padding: 6vw 6vw 6vw 6vw;
+margin: auto;
+
+}
+section .row .main{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+
+}
+section .row .main h1{
+    padding-top: 30px;
+    font-size: 45px;
+    color: rgb(67, 67, 241);
+
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: inherit;
+    margin: 30px;
+
+}
+.content .card{
+    flex: wrap;
+    margin: 50px;
+    width: 100%;
+    height: 60%;
+}
+.content .card img{
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 50px;
+}
+
+.content .card h4{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+h4{
+    color: rgb(67, 67, 241);
+}
+.content .card h4:hover{
+    color: saddlebrown;
+}
+.content .card p{
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 10px;
+    width: auto;
+
+}
+
+footer{
+    padding: 8vw;
+    background-color: #312f34;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+footer .footer-col{
+    padding-bottom: 40;
+}
+footer h3{
+    color: rgb(240, 232, 240);
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+footer li{
+    list-style: none;
+    color: #9996a0;
+    padding: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+}
+footer li:hover{
+color: rgb(240, 232, 240);
+}
+footer p{
+    color: #9996a0;
+}
+footer.subscribe{
+    margin-top: 20px;
+}
+footer input{
+    width: 220px;
+    padding: 12px 15px;
+    background-color:goldenrod;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+@media screen and (max-width:600px){
+    .container{
+        padding: 15px 20px;
+    }
+    .logo img{
+      width: 130px;
+
+    }
+    #menu-btn {
+        display: initial;
+        }
+        #menu-close {
+        display: initial;
+        font-size: 1.6rem;
+        color: white;
+        padding: 30px 0 20px 20px;
+        }
+        .links ul{
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start; 
+            top: 0;
+            right:-220px;
+            width: 220px;
+            background-color:rgb(34, 33, 87);
+            height: 100vh;
+            }
+            .links ul.active{
+                right: 0;
+
+            }
+            .links ul li{
+                padding: 20px 0 20px 40px;
+                margin-left: 0;
+            }
+            .links ul li a{
+                color: white;
+
+            }
+            .links ul li a:hover{
+                color: #64bcf4;
+            }
+            
+            .slider{
+                width: 580px;
+                border-radius: 1px;
+                overflow: hidden;
+            }
+            .slides{
+                width: 550%;
+                display: flex;
+            
+            }
+            .slide img{
+                width: 500px;
+               right: -220px;
+
+            
+            }
+            .navigation-manual{
+                position: absolute;
+                width: 500px;
+                margin-top: 470px;
+                display: flex;
+                justify-content: center;
+                }
+                .navigation-auto{
+                    position: absolute;
+                    display: flex;
+                    width: 500px;
+                    justify-content: center;
+                     } 
+                     section .row{
+                        width: 60%;
+                        padding: 3vw 3vw 3vw 3vw;
+                        
+                        }
+                        .content .card{
+                            flex: wrap;
+                            margin: 30px;
+                            width: 50%;
+                            height: 60%;
+                        }
+                        .content .card img{
+                            width: 100%;
+                            height: auto;
+                            padding: 0px;
+                            margin: 10px;
+                        }
+                        .content .card h4{
+                            margin-top: 5px;
+                            margin-left: 5px;
+                            font-size: 15px;
+                            align-items: center;
+                            flex-direction: column;
+                        }
+        }

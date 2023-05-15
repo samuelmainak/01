@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300;1,400&display=swap");
+
+:root{
+    --mainColor:#64bcf4;
+    --hoverColor:#64bcf4;
+    --backgroundColor: rgb(240, 232, 240);
+    --darkOne: #312f34;
+    --darkTwo:#45424d;
+    --lightOne:#919191;
+    --lightTwo:#aaa;
+}
+*,
+ *::before,
+ *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+.big-wrapper{
+    padding: 1.7rem;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--backgroundColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container{
+    position: relative;
+    
+    max-width: 81rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+    z-index:10;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.logo h3{
+    color: var(--darkTwo);
+    font-size: 1.55rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.links{
+    display: flex;
+}
+#menu-btn {
+width: 30px;
+height: 30px;
+display: none;
+}
+#menu-close{
+display: none;
+}
+.logo img{
+    width: 40px;
+    margin-right: .6rem;
+    margin-top: -0.6rem;
+}
+.links ul{
+display: flex;
+list-style: none;
+align-items: center;
+}
+.links a{
+    color:var(--lightTwo);
+    margin-left: 4.5rem;
+    display: inline-block;
+    transition: .3s;
+}
+.links a:hover {
+color: var(--hoverColor);
+transform: scale(1.05);
+}
+.btn{
+    display:inline-block;
+    padding: .9rem 1.9rem;
+    color: white !important;
+    background-color: var(--mainColor);
+    text-transform: capitalize;
+    border-radius: 16px;
+    transition: 0.3sec;
+}
+.btn:hover{
+    background-color: var(--hoverColor);
+    transform: scale(1) !important;
+
+}
+h7{
+font-size: 2.5rem;
+margin-left: 450px;
+color: rgb(67, 67, 241);
+margin-top: 40px;
+}
+h7:hover{
+    color: rgb(139, 69, 19);
+}
+.service{
+    padding: 8vw 8vw 8vw 8vw;
+    text-align: center;
+
+}
+.service .service-box{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+grid-gap: 1rem;
+margin-top: 50px;
+}
+.service .services{
+    text-align: start;
+    background-color: beige;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+.service .services img{
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    
+}
+.overlay{
+    position: absolute;
+    margin-bottom: 40px;
+    background: rgb(0,0,0,0.5);
+    color:blue;
+    width: 10%;
+    transition: .5s ease;
+    opacity: 0;
+    color: rgb(37, 34, 240);
+    font-size: 20px;
+    margin: auto;
+    transform: translate(-50%);
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -0.5inch;
+    height: 60%;
+    justify-content: center;
+    align-items: inherit;
+    
+}
+.overlay #cons{
+    background:rgb(23, 24, 94);
+    border: 1px solid rgb(23, 24, 94);
+    cursor: pointer;
+    margin: 10px;
+    padding: 2px;
+    width: 10px;
+    justify-items: center;
+    align-items: center;
+    
+    }
+    .overlay #cons:hover{
+        color: chocolate;
+        transition: .5 ease;
+    }
+
+.services:hover .overlay {
+    opacity: 1;
+}
+.service .services .details{
+    padding: 15px 15px 0 15px;
+}
+.service .services .details i{
+    color: #fdc93b;
+    font-size: .9rem;
+}
+.services h2:hover{
+    color: saddlebrown;
+}
+.registration{
+padding: 6vw 8vw 6vw 8vw;
+background-image: linear-gradient(rgba(99,112,168,0.5),rgba(81,91,233,0.5)),url("images/a1.jpg");
+width: 100%;
+height: 100%;
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.registration .reminder{
+    color: white;
+}
+.registration .reminder h1{
+    color: white;
+}
+.registration .reminder .time{
+    display: flex;
+    margin-top: 40px;
+    
+}
+.registration .reminder .time .date{
+    text-align: center;
+    padding:13px 33px ;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    border-radius: 10px;
+    margin: 0 5px 10px 5px;
+    border: 1px solid  rgba(rgb(22, 22, 4));
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.registration .form{
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37) ;
+
+}
+.registration .form input::placeholder{
+    color: #45424d;
+    font-weight: 500;
+    font-size: 0.9rem;
+    
+}
+.registration .form input{
+    margin: 15px 0;
+    padding: 15px 10px;
+    border: 1px solid rgb(126, 126, 247);
+    outline:none;
+
+}
+footer{
+    padding: 6vw 8vw 6vw 8vw;
+    background-color: #312f34;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+footer .footer-col{
+    padding-bottom: 40;
+}
+footer h3{
+    color: rgb(240, 232, 240);
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+footer li{
+    list-style: none;
+    color: #9996a0;
+    padding: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+}
+footer li:hover{
+color: rgb(240, 232, 240);
+}
+footer p{
+    color: #9996a0;
+}
+footer.subscribe{
+    margin-top: 20px;
+}
+footer input{
+    width: 220px;
+    padding: 12px 15px;
+    background-color:goldenrod;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+@media screen and (max-width:600px){
+    .container{
+        padding: 15px 20px;
+    }
+    .logo img{
+      width: 130px;
+
+    }
+    #menu-btn {
+        display: initial;
+        }
+        #menu-close {
+        display: initial;
+        font-size: 1.6rem;
+        color: white;
+        padding: 30px 0 20px 20px;
+        }
+        .links ul{
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start; 
+            top: 0;
+            right:-220px;
+            width: 220px;
+            background-color:rgb(34, 33, 87);
+            height: 100vh;
+         
+          
+
+
+            }
+            .links ul.active{
+                right: 0;
+
+            }
+            .links ul li{
+                padding: 20px 0 20px 40px;
+                margin-left: 0;
+            }
+            .links ul li a{
+                color: white;
+
+            }
+            .links ul li a:hover{
+                color: #64bcf4;
+            }
+            .registration{
+                padding: 1.5vw 1.5vw 1.5vw 1vw;
+                background-image: linear-gradient(rgba(99,112,168,0.5),rgba(81,91,233,0.5)),url("images/a1.jpg");
+                width: 100%;
+                height:100%;
+                display: flex;
+                align-items:inherit;
+                
+                }
+                .registration .reminder .time .date{
+                    text-align: inherit;
+                    padding:5px 5px ;
+                    border-radius: 5px;
+                    margin: 0 2px 6px 2px;
+                    font-size: 0.9rem;
+                    font-weight: 200;
+                }
+            .registration .form{
+                border-radius: 2.0px;
+                display: flex;
+                flex-direction: column;
+                padding:2px;
+                margin-left: 0;
+            }
+
+
+        }

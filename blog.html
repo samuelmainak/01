@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zero and one</title>
+    <link rel="stylesheet" href="blog.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+        <div class="big-wrapper dark">
+            <header>
+                <div class="container">
+                    <div class="logo">
+                        <image src="images/logo.png"></image>
+                        <h3>zero and one</h3>
+                    </div>
+                    <div class="links">
+                        <ul>
+                            <i id="menu-close" class="fa fa-times"></i>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                          
+                        </ul>
+                        <img id="menu-btn"src="images/hamburger.png">
+                    
+                    </div>
+                </div>
+            </header>
+            <section class="photos">
+           <div class="pic">
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <div class="slide first">
+                        <img src="images/slider1.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/slider2.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/slider3.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/slider4.jpg" alt="">
+                    </div>
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                     </div>
+                     <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+          
+            <section class="blog">
+                <div class="row">
+                    <div class="main">
+                        <h1>Blog & News</h1>
+                    </div>
+                    <div class="content">
+                        <div class="card">
+                            <img src="images/BLOG1.webp">
+                            <h4>Is ChatGPT going to replace programmers and developers?</h4>
+                            <p>Programmers and developers are unlikely to be replaced by chatGPT.Because it is still in the infancy,programming specialist cannot yet be replaced by technology</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/blog2.jpg">
+                            <h4> Why you need Search Engine Optimization(SEO) for your website</h4>
+                            <p>SEO is aimed at aligning a website with search engine ranking algorithm so that it can be easily found,crawled,indexed and surfaced in the SERP for relevant queries  </p>
+                        </div>
+                        <div class="card">
+                            <img src="images/blog3.jpg">
+                            <h4>How technology can enhance business operations</h4>
+                            <p>Technology plays a significant role in the success of any business looking to enhance their current operations and improve their customers experience. </p>
+                        </div>
+                    </div>
+                </div>
+          </section>
+          <footer>
+                <div class="footer-col">
+                    <h3>Top services</h3>
+                    <li>Website development</li>
+                    <li>mobile application development</li>
+                    <li>software development</li>
+                    </div>
+                    <div class="footer-col">
+                    <h3>Useful links</h3>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </div>
+                <div class="footer-col">
+                    <h3>Guides</h3>
+                    <li>faqs</li>
+                    <li>experts</li>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact info</h3>
+                    <li>Thika town</li>
+                    <li>Phone: +254115867296</li>
+                    <li>Email:info@zeroandone.com</li>
+
+                </div>
+                <div class="footer-col">
+                    <h3>Socials</h3>
+                    <li> <a href="">facebook</a></li>
+                    <li> <a href="">Linkedin</a></li>
+                    <li> <a href="">Twitter</a></li>
+                    <li> <a href="">instagram</a></li>
+                </div>
+          </footer>
+          </div>    
+ </div>
+ <script>
+    $('#menu-btn').click(function(){
+       $('.links ul').addClass('active')
+    });
+   $('#menu-close').click(function(){
+       $('.links ul').removeClass('active')
+    });
+    var counter = 1;
+    setInterval(function(){
+    document.getElementById('radio' + counter).checked = true; 
+    counter++;
+    if (counter > 4){
+        counter = 1;
+    }
+    },5000);
+</script>
+</body>
+</html>
